@@ -1,26 +1,18 @@
+
 import { input } from "../data/input1"
-// const input = ''
+import { reducerSum } from "util/array"
+
 const data = input.split("\n").map((i) => parseInt(i))
-const dataComplement2020 = data.map((i) => 2020 - i)
+const sommeIncrease = (arr) => arr.map((courant, i) => i>=1 && arr[i-1] < courant ? 1:0).reduce(reducerSum)
 
 function result1() {
-  const dataFin = data.filter((i) => dataComplement2020.includes(i))
-  const result = dataFin[0] * (2020 - dataFin[0])
-  return result
+  return sommeIncrease(data)
 }
 function result2() {
-  let resultatFinal = []
-  dataComplement2020.forEach((n, pos) => {
-    const dataComplementN = data.map((i) => n - i)
-    const dataFin = data.filter((i) => dataComplementN.includes(i))
-    if (dataFin[0]) {
-      resultatFinal = dataFin
-    }
-  })
+
+  const dataWindows = data.map((courant, i) => i<(data.length - 2) && courant + data[i+1] + data[i+2]).filter(Boolean)
   return (
-    resultatFinal[0] *
-    resultatFinal[1] *
-    (2020 - resultatFinal[0] - resultatFinal[1])
+    sommeIncrease(dataWindows)
   )
 }
 
