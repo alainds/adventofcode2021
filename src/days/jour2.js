@@ -1,8 +1,8 @@
+import { reducerMultiply } from "util/array"
 import { input } from "../data/input2"
 
 const dataBrut = input.split("\n")
 const coordonneesData = (arr) => {
-  console.log(arr)
   let coordonnees = [0, 0]
   arr.map((a) => {
     const coordonneeString = a.split(" ")
@@ -24,7 +24,6 @@ const coordonneesData = (arr) => {
     }
     return a
   })
-  console.log(coordonnees)
   return coordonnees
 }
 
@@ -51,17 +50,16 @@ const coordonneesDataWithAim = (arr) => {
     }
     return a
   })
-  console.log(coordonnees)
   return coordonnees
 }
 
 function result1() {
   const result = coordonneesData(dataBrut)
-  return result[0] * result[1]
+  return result.reduce(reducerMultiply)
 }
 function result2() {
   const result = coordonneesDataWithAim(dataBrut)
-  return result[0] * result[1]
+  return result.reduce(reducerMultiply)
 }
 export default function getResultats() {
   return [result1(), result2()]
