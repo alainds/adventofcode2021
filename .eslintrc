@@ -12,7 +12,9 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "prettier/prettier": [
       "error", {
-        "semi": false
+        "semi": false,
+        
+        "endOfLine": "auto"
       }
     ]
   },

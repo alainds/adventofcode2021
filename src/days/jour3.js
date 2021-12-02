@@ -1,16 +1,13 @@
-import { input } from "../data/input2"
+import { input, inputEx } from "../data/input3"
 import { transformData, reducerSum } from "util/array"
 
 const dataBrut = input.split("\n")
 
-
 function result1() {
-
   const result = 0
   return result
 }
 function result2() {
- 
   const result = 0
   return result
 }
