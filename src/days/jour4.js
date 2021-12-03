@@ -1,5 +1,5 @@
-import { input,inputEx } from "../data/input4'"
-import { transformData, reducerSum } from "util/array"
+import { input, inputEx } from "data/input4"
+import {} from "util/array"
 
 const dataBrut = input.split("\n")
 

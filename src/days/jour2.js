@@ -28,7 +28,7 @@ const coordonneesData = (arr) => {
 }
 
 const coordonneesDataWithAim = (arr) => {
-  console.log(arr)
+  // console.log(arr)
   let coordonnees = [0, 0, 0]
   arr.map((a) => {
     const coordonneeString = a.split(" ")
