@@ -3,8 +3,8 @@ import jour1 from "./days/jour1"
 import jour2 from "./days/jour2"
 import jour3 from "./days/jour3"
 import jour4 from "./days/jour4"
-// import jour5 from "./days/jour5"
-// import jour6 from "./days/jour6"
+import jour5 from "./days/jour5"
+import jour6 from "./days/jour6"
 // import jour7 from "./days/jour7"
 // import jour8 from "./days/jour8"
 // import jour9 from "./days/jour9"
@@ -44,8 +44,8 @@ function App() {
     // jour9(),
     // jour8(),
     // jour7(),
-    // jour6(),
-    // jour5(),
+    jour6(),
+    jour5(),
     jour4(),
     jour3(),
     jour2(),

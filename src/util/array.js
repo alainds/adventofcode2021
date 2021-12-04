@@ -93,3 +93,14 @@ export function arrayRotate(arr, reverse) {
   else arr.push(arr.shift())
   return arr
 }
+
+export const transposeArraysOfArrays = (d) => {
+  let data = []
+  d.map((a, i) =>
+    a.map((b, j) => {
+      data[j] ? data[j].push(b) : (data[j] = [b])
+      return b
+    })
+  )
+  return data
+}

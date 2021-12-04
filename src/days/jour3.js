@@ -1,24 +1,14 @@
 import { input, inputEx } from "data/input3"
-import { getNbOccurrence } from "util/array"
+import { getNbOccurrence, transposeArraysOfArrays } from "util/array"
 
 const dataBrut = input.split("\n").map((a) => a.split(""))
 
-const transposeArraysOfArrays = (d) => {
-  let data = []
-  d.map((a, i) =>
-    a.map((b, j) => {
-      data[j] ? data[j].push(b) : (data[j] = [b])
-      return b
-    })
-  )
-  return data
-}
 const getNbOccurrence0 = (a) => getNbOccurrence(a, "0")
 const getNbOccurrence1 = (a) => getNbOccurrence(a, "1")
 const getMaxOccurrence = (a) =>
   getNbOccurrence1(a) >= getNbOccurrence0(a) ? "1" : "0"
 const getMinOccurrence = (a) =>
-  getNbOccurrence1(a) < getNbOccurrence0(a) ? "1" : "0"
+  getNbOccurrence1(a) >= getNbOccurrence0(a) ? "0" : "1"
 
 const calcul = (arr, fonctionRecherche = getMaxOccurrence) => {
   let resultat = [...arr]
