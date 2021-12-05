@@ -10,6 +10,10 @@ export const transformData = (mydata) => {
 
 export const reducerSum = (accumulator, currentValue) =>
   accumulator + currentValue
+export const reducerMin = (accumulator, currentValue) =>
+  Math.min(accumulator, currentValue)
+export const reducerMax = (accumulator, currentValue) =>
+  Math.max(accumulator, currentValue)
 export const reducerAnd = (accumulator, currentValue) =>
   accumulator && currentValue
 export const reducerMultiply = (accumulator, currentValue) =>

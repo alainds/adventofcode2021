@@ -38,7 +38,7 @@ const faireUnTir = (cartes, cartesTirs, tir) => {
 }
 const scoreWinCarte = (carte, tirs) =>
   carte
-    .map((ligne) => {
+    ?.map((ligne) => {
       const unmark = ligne.filter((item) => !tirs.includes(item))
       // console.log({ unmark })
       return unmark.length > 0 ? unmark.reduce(reducerSum) : 0
