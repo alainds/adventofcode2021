@@ -1,4 +1,4 @@
-import { input } from "data/input9"
+import { input, inputEx } from "data/input9"
 import {} from "util/array"
 
 const dataBrut = input.split("\n")
