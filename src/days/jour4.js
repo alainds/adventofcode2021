@@ -119,7 +119,7 @@ function result2() {
     }
     if (cartes.length === 0) {
       const tirsGagnant = tirs.slice(0, index + 1)
-      console.log("tirsGagnant", tirsGagnant)
+      //console.log("tirsGagnant", tirsGagnant)
       result = scoreWinCarte(carteWin, tirsGagnant) * tirs[index - 1]
 
       break

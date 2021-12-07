@@ -10,7 +10,7 @@ const algobete = (fishes, days) => {
 
     newFishes = newFishes.map((a) => (a - 1 >= 0 ? a - 1 : 6)).concat(huits)
   }
-  console.log(newFishes)
+  //console.log(newFishes)
   return newFishes
 }
 function result1() {
