@@ -1,3 +1,2 @@
-export let input = ``
-
-input = ``
+export const inputEx = ``
+export const input = ``

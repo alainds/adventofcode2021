@@ -1,7 +1,7 @@
 import { input, inputEx } from "data/input9"
 import {} from "util/array"
 
-const dataBrut = input.split("\n")
+const dataInit = (inp) => inp.split("\n")
 
 function result1() {
   const result = 0
