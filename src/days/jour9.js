@@ -8,9 +8,6 @@ const calculLows = (data) =>
     ligne.map((val, j) => {
       const voisins = calculVoisins(data, i, j)
       const isLow = voisins.every((a) => val < a)
-      // isLow && console.log(val)
-      // isLow && console.log("i", i)
-      // isLow && console.log("j", j)
       return isLow ? val : -1
     })
   )
@@ -22,22 +19,9 @@ const calculVoisins = (data, i, j) => {
     i < data.length - 1 ? data[i + 1][j] : null,
     j < data[0].length - 1 ? data[i][j + 1] : null,
   ]
-
-  // console.log(data[i][j])
-  // console.log(voisins)
   return voisins.filter((a) => a !== null)
 }
 
-const calculVoisinsAll = (data, i, j) => {
-  let voisins = []
-  voisins = [
-    i > 0 ? data[i - 1][j] : null,
-    j > 0 ? data[i][j - 1] : null,
-    i < data.length - 1 ? data[i + 1][j] : null,
-    j < data[0].length - 1 ? data[i][j + 1] : null,
-  ]
-  return voisins
-}
 const calculVoisinsCoor = (data, i, j) => {
   const voisins = [
     i > 0 ? [i - 1, j] : null,
@@ -64,21 +48,17 @@ const calculBazin = (data, dataBazin) => {
     let voisinsValides = []
     bazin1.map((coor) => {
       dataBazinNew[coor[0]][coor[1]]++
-
       calculVoisinsCoor(data, coor[0], coor[1]).map(
         (c) =>
           voisinsValides.filter((d) => d[0] === c[0] && d[1] === c[1])
             .length === 0 && voisinsValides.push(c)
       )
     })
-
     voisinsValides.map((a) => {
       dataBazinNew[a[0]][a[1]]++
     })
-
     bazin1 = calculBazin1(dataBazinNew)
   }
-
   return dataBazinNew
 }
 
@@ -89,7 +69,6 @@ const countItemInBazin = (dataBazin) =>
 
 function result1() {
   const lows = calculLows(dataInit(input))
-  console.log(lows.map((b) => b.filter((a) => a !== -1)))
   const result = calculRisk(lows)
   return result
 }
@@ -108,7 +87,6 @@ function result2() {
     dataBazin[lowscoor[i][0]][lowscoor[i][1]] = 1
     const bazins = calculBazin(data, dataBazin, lowscoor[0][0], lowscoor[0][1])
     nbBazins.push(countItemInBazin(bazins))
-    console.log(bazins)
   }
 
   const result = nbBazins
