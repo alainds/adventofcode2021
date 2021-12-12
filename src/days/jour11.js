@@ -86,7 +86,7 @@ const doStep = (dataIn) => {
 }
 function result1() {
   const result = doSteps(dataInit(input), 100)
-  return flashesTotal
+  return result
 }
 function result2() {
   const result = doStepsWhile(dataInit(input))

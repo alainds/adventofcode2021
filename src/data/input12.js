@@ -5,7 +5,17 @@ A-b
 b-d
 A-end
 b-end`
-export const inputEx2 = `fs-end
+export const inputEx2 = `dc-end
+HN-start
+start-kj
+dc-start
+dc-HN
+LN-dc
+HN-end
+kj-sa
+kj-HN
+kj-dc`
+export const inputEx3 = `fs-end
 he-DX
 fs-he
 start-DX
