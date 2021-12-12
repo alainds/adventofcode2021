@@ -1,17 +1,16 @@
-import { input } from "data/input21"
+import { input, inputEx } from "data/input21"
+import {} from "util/array"
+
+const dataInit = (inp) => inp.split("\n")
 
 function result1() {
-  return
+  const result = 0
+  return result
 }
-
 function result2() {
-  return
+  const result = 0
+  return result
 }
-
 export default function getResultats() {
   return [result1(), result2()]
-}
-
-function getData() {
-  return input
 }

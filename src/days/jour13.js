@@ -1,4 +1,4 @@
-import { input, inputEx } from "data/input12"
+import { input, inputEx } from "data/input13"
 import {} from "util/array"
 
 const dataInit = (inp) => inp.split("\n")
