@@ -108,3 +108,8 @@ export const transposeArraysOfArrays = (d) => {
   )
   return data
 }
+
+export const getUnique = (arrayOfArray) => {
+  const set = new Set(arrayOfArray.map(JSON.stringify))
+  return Array.from(set).map(JSON.parse)
+}

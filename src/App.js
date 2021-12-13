@@ -13,43 +13,43 @@ import jour11 from "./days/jour11"
 import jour12 from "./days/jour12"
 import jour13 from "./days/jour13"
 import jour14 from "./days/jour14"
-// import jour15 from "./days/jour15"
-// import jour16 from "./days/jour16"
-// import jour17 from "./days/jour17"
-// import jour18 from "./days/jour18"
-// import jour19 from "./days/jour19"
-// import jour20 from "./days/jour20"
-// import jour22 from "./days/jour22"
-// import jour23 from "./days/jour23"
-// import jour24 from "./days/jour24"
-// import jour25 from "./days/jour25"
+import jour15 from "./days/jour15"
+import jour16 from "./days/jour16"
+import jour17 from "./days/jour17"
+import jour18 from "./days/jour18"
+import jour19 from "./days/jour19"
+import jour20 from "./days/jour20"
+import jour22 from "./days/jour22"
+import jour23 from "./days/jour23"
+import jour24 from "./days/jour24"
+import jour25 from "./days/jour25"
 
 function App() {
   const tableauResultats = [
-    // jour25(),
-    // jour24(),
-    // jour23(),
-    // jour22(),
-    // jour20(),
-    // jour19(),
-    // jour18(),
-    // jour17(),
-    // jour16(),
-    // jour15(),
+    jour25(),
+    jour24(),
+    jour23(),
+    jour22(),
+    jour20(),
+    jour19(),
+    jour18(),
+    jour17(),
+    jour16(),
+    jour15(),
     jour14(),
     jour13(),
-    jour12(),
-    jour11(),
-    jour10(),
-    jour9(),
-    jour8(),
-    jour7(),
-    jour6(),
-    jour5(),
-    jour4(),
-    jour3(),
-    jour2(),
-    jour1(),
+    // jour12(),
+    // jour11(),
+    // jour10(),
+    // jour9(),
+    // jour8(),
+    // jour7(),
+    // jour6(),
+    // jour5(),
+    // jour4(),
+    // jour3(),
+    // jour2(),
+    // jour1(),
   ]
   return (
     <div className="App">
