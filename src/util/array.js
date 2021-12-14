@@ -34,6 +34,11 @@ export const intersectArray = (array1, array2) =>
 export function getNbOccurrence(array, value) {
   return array.filter((v) => v === value).length
 }
+export function countOccurencesAll(array) {
+  return array.reduce(function (acc, curr) {
+    return acc[curr] ? ++acc[curr] : (acc[curr] = 1), acc
+  }, {})
+}
 
 export function getArrayDepth(value) {
   return Array.isArray(value) ? 1 + Math.max(...value.map(getArrayDepth)) : 0
