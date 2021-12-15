@@ -119,11 +119,11 @@ const calculPaths = (inp, nbPassages) => {
     paths = paths.filter((path) => path.detail[0] !== END)
   }
 
-  console.log("paths", paths)
-  console.log(
-    "pathsFinis",
-    pathsFinis.map((a) => a.detail)
-  )
+  // console.log("paths", paths)
+  // console.log(
+  //   "pathsFinis",
+  //   pathsFinis.map((a) => a.detail)
+  // )
   return pathsFinis.length
 }
 

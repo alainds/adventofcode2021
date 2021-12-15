@@ -44,14 +44,11 @@ function result1() {
 }
 function result2() {
   const data = dataInit(inputEx)
-  const end = doSteps(data, 12)
 
   for (let index = 1; index < 20; index++) {
-    console.log(countOccurencesAll(doSteps(data, index)))
+    // console.log(countOccurencesAll(doSteps(data, index)))
   }
-  const result =
-    Math.max(...Object.values(occurences)) -
-    Math.min(...Object.values(occurences))
+  const result = null
   return result
 }
 export default function getResultats() {
